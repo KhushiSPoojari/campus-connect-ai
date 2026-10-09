@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState } from 'react';
@@ -17,6 +16,7 @@ import {
   LogIn,
   LogOut,
   User,
+  UserPlus,
 } from 'lucide-react';
 
 import { useAuth } from '@/lib/context/auth-context';
@@ -67,12 +67,12 @@ export function Navbar() {
                 </span>
 
                 <span className="hidden shrink-0 rounded-full border border-indigo-200/60 bg-indigo-50 px-2 py-0.5 text-[10px] font-semibold text-indigo-700 dark:border-indigo-800 dark:bg-indigo-950/70 dark:text-indigo-300 2xl:inline-flex">
-                  Student Portal
+                  Smart Campus
                 </span>
               </div>
 
               <p className="mt-1 hidden max-w-[210px] text-[11px] leading-snug text-zinc-500 dark:text-zinc-400 sm:block">
-                Smart Campus Information &amp; Space Optimization
+                Information &amp; Space Optimization
               </p>
             </div>
           </Link>
@@ -111,37 +111,32 @@ export function Navbar() {
           </nav>
 
           {/* ADMIN AND AUTHENTICATION */}
-          <div className="hidden shrink-0 items-center gap-2 2xl:flex">
-            <Link
-              href="/admin"
-              className={`flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg border px-3 py-2 text-xs font-semibold transition-colors ${
-                user?.role === 'admin'
-                  ? 'border-indigo-300 bg-indigo-50/60 text-indigo-700 dark:border-indigo-800 dark:bg-indigo-950/40 dark:text-indigo-300'
-                  : 'border-zinc-200 text-zinc-600 hover:bg-zinc-50 hover:text-indigo-600 dark:border-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-indigo-400'
-              }`}
-            >
-              <ShieldAlert className="h-3.5 w-3.5 shrink-0" />
-              <span>Admin Dashboard</span>
-
-              {user?.role === 'admin' && (
-                <span className="rounded bg-indigo-600 px-1.5 py-0.5 text-[10px] font-bold text-white">
-                  Admin
-                </span>
-              )}
-            </Link>
-
+          <div className="hidden shrink-0 items-center gap-2 xl:flex">
             {isAuthenticated && user ? (
-              <div className="flex shrink-0 items-center gap-2 border-l border-zinc-200 pl-2 dark:border-zinc-800">
+              <div className="flex shrink-0 items-center gap-2">
+                {user.role === 'admin' ? (
+                  <Link
+                    href="/admin"
+                    className="flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg border border-indigo-300 bg-indigo-50/70 px-3 py-2 text-xs font-semibold text-indigo-700 shadow-sm transition hover:bg-indigo-100 dark:border-indigo-800 dark:bg-indigo-950/40 dark:text-indigo-300"
+                  >
+                    <ShieldAlert className="h-3.5 w-3.5 shrink-0 text-indigo-600 dark:text-indigo-400" />
+                    <span>Admin Dashboard</span>
+                    <span className="rounded bg-indigo-600 px-1.5 py-0.5 text-[10px] font-bold text-white">
+                      Admin
+                    </span>
+                  </Link>
+                ) : (
+                  <span className="text-xs text-zinc-500 dark:text-zinc-400 hidden 2xl:inline">
+                    Student Portal
+                  </span>
+                )}
+
                 <div className="flex items-center gap-1.5 rounded-full bg-zinc-100 px-2.5 py-1 text-xs font-medium text-zinc-700 dark:bg-zinc-800/80 dark:text-zinc-300">
                   <User className="h-3.5 w-3.5 shrink-0 text-zinc-400" />
-
-                  <span className="max-w-[90px] truncate">
+                  <span className="max-w-[100px] truncate font-semibold">
                     {user.name}
                   </span>
-
-                  <Badge
-                    variant={user.role === 'admin' ? 'primary' : 'info'}
-                  >
+                  <Badge variant={user.role === 'admin' ? 'primary' : 'info'}>
                     {user.role}
                   </Badge>
                 </div>
@@ -151,19 +146,40 @@ export function Navbar() {
                   onClick={() => logout()}
                   title="Sign out"
                   aria-label="Sign out"
-                  className="rounded-lg p-1.5 text-zinc-400 transition hover:bg-red-50 hover:text-red-600 dark:hover:bg-red-950/30"
+                  className="rounded-lg p-2 text-zinc-400 transition hover:bg-red-50 hover:text-red-600 dark:hover:bg-red-950/30"
                 >
                   <LogOut className="h-4 w-4" />
                 </button>
               </div>
             ) : (
-              <Link
-                href="/login"
-                className="flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg bg-indigo-600 px-3 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-indigo-500"
-              >
-                <LogIn className="h-3.5 w-3.5" />
-                <span>Sign In</span>
-              </Link>
+              <div className="flex items-center gap-1.5">
+                {/* Student Login */}
+                <Link
+                  href="/login"
+                  className="flex shrink-0 items-center gap-1 whitespace-nowrap rounded-lg px-2.5 py-1.5 text-xs font-semibold text-zinc-700 transition hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-zinc-800"
+                >
+                  <LogIn className="h-3.5 w-3.5 text-indigo-600 dark:text-indigo-400" />
+                  <span>Student Login</span>
+                </Link>
+
+                {/* Student Register */}
+                <Link
+                  href="/register"
+                  className="flex shrink-0 items-center gap-1 whitespace-nowrap rounded-lg px-2.5 py-1.5 text-xs font-semibold text-zinc-700 transition hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-zinc-800"
+                >
+                  <UserPlus className="h-3.5 w-3.5 text-indigo-600 dark:text-indigo-400" />
+                  <span>Register</span>
+                </Link>
+
+                {/* Admin Portal */}
+                <Link
+                  href="/admin/login"
+                  className="flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg border border-indigo-600/30 bg-indigo-50 px-3 py-1.5 text-xs font-semibold text-indigo-700 shadow-sm transition hover:bg-indigo-100 dark:border-indigo-800 dark:bg-indigo-950/50 dark:text-indigo-300"
+                >
+                  <ShieldAlert className="h-3.5 w-3.5 text-indigo-600 dark:text-indigo-400" />
+                  <span>Admin Portal</span>
+                </Link>
+              </div>
             )}
           </div>
 
@@ -217,14 +233,14 @@ export function Navbar() {
             );
           })}
 
-          {/* Admin link */}
+          {/* Admin Dashboard link */}
           <Link
             href="/admin"
             onClick={() => setMobileMenuOpen(false)}
             className="flex items-center justify-between rounded-lg px-3 py-2.5 text-sm text-zinc-700 hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-zinc-800"
           >
             <span className="flex items-center gap-2">
-              <ShieldAlert className="h-4 w-4 text-zinc-400" />
+              <ShieldAlert className="h-4 w-4 text-indigo-600 dark:text-indigo-400" />
               Admin Dashboard
             </span>
 
@@ -233,44 +249,66 @@ export function Navbar() {
             )}
           </Link>
 
-          {/* Authentication */}
-          {isAuthenticated && user ? (
-            <div className="flex items-center justify-between gap-3 rounded-lg bg-zinc-50 px-3 py-3 dark:bg-zinc-800/50">
-              <div className="flex min-w-0 items-center gap-2">
-                <User className="h-4 w-4 shrink-0 text-zinc-400" />
+          {/* Authentication section in drawer */}
+          <div className="pt-2 border-t border-zinc-200 dark:border-zinc-800">
+            {isAuthenticated && user ? (
+              <div className="flex items-center justify-between gap-3 rounded-lg bg-zinc-50 px-3 py-3 dark:bg-zinc-800/50">
+                <div className="flex min-w-0 items-center gap-2">
+                  <User className="h-4 w-4 shrink-0 text-zinc-400" />
 
-                <div className="min-w-0">
-                  <div className="truncate text-sm font-semibold text-zinc-800 dark:text-zinc-200">
-                    {user.name}
-                  </div>
+                  <div className="min-w-0">
+                    <div className="truncate text-sm font-semibold text-zinc-800 dark:text-zinc-200">
+                      {user.name}
+                    </div>
 
-                  <div className="truncate text-xs text-zinc-500">
-                    {user.role} · {user.email}
+                    <div className="truncate text-xs text-zinc-500">
+                      {user.role} · {user.email}
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <button
-                type="button"
-                onClick={() => {
-                  logout();
-                  setMobileMenuOpen(false);
-                }}
-                className="shrink-0 px-2 py-1 text-xs font-medium text-red-600 hover:text-red-700"
-              >
-                Sign Out
-              </button>
-            </div>
-          ) : (
-            <Link
-              href="/login"
-              onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center gap-2 rounded-lg px-3 py-2.5 text-sm font-semibold text-indigo-600 hover:bg-indigo-50 dark:text-indigo-400 dark:hover:bg-indigo-950/30"
-            >
-              <LogIn className="h-4 w-4" />
-              Sign In to Account
-            </Link>
-          )}
+                <button
+                  type="button"
+                  onClick={() => {
+                    logout();
+                    setMobileMenuOpen(false);
+                  }}
+                  className="shrink-0 px-2 py-1 text-xs font-semibold text-red-600 hover:text-red-700"
+                >
+                  Sign Out
+                </button>
+              </div>
+            ) : (
+              <div className="space-y-1.5 pt-1">
+                <Link
+                  href="/login"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold text-indigo-600 hover:bg-indigo-50 dark:text-indigo-400 dark:hover:bg-indigo-950/30"
+                >
+                  <LogIn className="h-4 w-4" />
+                  Student Sign In
+                </Link>
+
+                <Link
+                  href="/register"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-zinc-800"
+                >
+                  <UserPlus className="h-4 w-4" />
+                  Student Registration
+                </Link>
+
+                <Link
+                  href="/admin/login"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold text-indigo-700 bg-indigo-50/70 hover:bg-indigo-100 dark:text-indigo-300 dark:bg-indigo-950/40"
+                >
+                  <ShieldAlert className="h-4 w-4" />
+                  Administrator Portal
+                </Link>
+              </div>
+            )}
+          </div>
         </div>
       )}
     </header>

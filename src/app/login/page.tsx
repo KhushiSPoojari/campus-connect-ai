@@ -11,10 +11,11 @@ import {
   CheckCircle,
   Loader2,
   ArrowRight,
-  Terminal,
   Eye,
   EyeOff,
   UserPlus,
+  ShieldAlert,
+  Sparkles,
 } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
@@ -51,6 +52,12 @@ function LoginFormContent() {
       : ''
   );
   const [successMessage, setSuccessMessage] = useState<string>('');
+
+  function fillDemoStudent() {
+    setEmail('student@campus.edu');
+    setPassword('Student@Campus2026!');
+    setErrorMessage('');
+  }
 
   // If already authenticated, show status
   if (isAuthenticated && user) {
@@ -124,12 +131,36 @@ function LoginFormContent() {
         <div className="w-12 h-12 mx-auto rounded-xl bg-indigo-600 flex items-center justify-center text-white shadow-md shadow-indigo-500/20">
           <GraduationCap className="w-7 h-7" />
         </div>
+        <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-950/70 text-indigo-700 dark:text-indigo-300 text-xs font-semibold border border-indigo-200/60 dark:border-indigo-800">
+          <span>Student Portal Access</span>
+        </div>
         <h1 className="text-2xl font-extrabold text-zinc-900 dark:text-zinc-100 tracking-tight">
-          Sign In
+          Student Sign In
         </h1>
         <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400">
-          Access Campus Connect AI with your institutional credentials
+          Access Campus Connect AI with your student credentials
         </p>
+      </div>
+
+      {/* Demo Credentials Helper Pill */}
+      <div className="p-3 bg-zinc-50 dark:bg-zinc-800/60 rounded-xl border border-zinc-200 dark:border-zinc-700 text-xs space-y-2">
+        <div className="flex items-center justify-between">
+          <span className="font-semibold text-zinc-700 dark:text-zinc-300 flex items-center gap-1.5">
+            <Sparkles className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400" />
+            <span>Default Demo Student:</span>
+          </span>
+          <button
+            type="button"
+            onClick={fillDemoStudent}
+            className="text-[11px] font-semibold text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 underline underline-offset-2"
+          >
+            Auto-fill
+          </button>
+        </div>
+        <div className="font-mono text-[11px] text-zinc-600 dark:text-zinc-300 bg-white dark:bg-zinc-900 p-2 rounded border border-zinc-200 dark:border-zinc-800 flex flex-col gap-0.5">
+          <div>Email: <span className="text-indigo-600 dark:text-indigo-400">student@campus.edu</span></div>
+          <div>Password: <span className="text-indigo-600 dark:text-indigo-400">Student@Campus2026!</span></div>
+        </div>
       </div>
 
       {/* Alerts */}
@@ -157,7 +188,7 @@ function LoginFormContent() {
       <form onSubmit={handleLoginSubmit} className="space-y-4">
         <div>
           <label className="block text-xs font-semibold uppercase tracking-wider text-zinc-600 dark:text-zinc-400 mb-1">
-            Email Address
+            Student Email Address
           </label>
           <div className="relative">
             <Mail className="w-4 h-4 text-zinc-400 absolute left-3 top-3 pointer-events-none" />
@@ -166,7 +197,7 @@ function LoginFormContent() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="e.g. student@campus.edu or admin@campus.edu"
+              placeholder="e.g. student@campus.edu or 2026cs@campus.edu"
               className="w-full rounded-lg border border-zinc-300 bg-zinc-50 pl-9 pr-3 py-2 text-sm text-zinc-900 outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100"
             />
           </div>
@@ -217,7 +248,7 @@ function LoginFormContent() {
         </Button>
       </form>
 
-      {/* Link to Registration */}
+      {/* Link to Registration & Admin Portal */}
       <div className="pt-4 border-t border-zinc-200 dark:border-zinc-800 text-center space-y-3">
         <div className="text-xs text-zinc-600 dark:text-zinc-400">
           New student without an account?{' '}
@@ -230,18 +261,17 @@ function LoginFormContent() {
           </Link>
         </div>
 
-        {/* Administrator Provisioning Notice */}
-        <div className="pt-2 text-left text-xs text-zinc-500 dark:text-zinc-400 space-y-1.5 bg-zinc-50 dark:bg-zinc-800/60 p-3 rounded-lg border border-zinc-200/80 dark:border-zinc-700/80">
-          <div className="flex items-center gap-1.5 font-semibold text-zinc-700 dark:text-zinc-300">
-            <Terminal className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400" />
-            <span>Administrator Provisioning:</span>
-          </div>
-          <p className="text-[11px]">
-            To create an administrator account, use the secure server CLI command:
-          </p>
-          <code className="block bg-zinc-100 dark:bg-zinc-900 p-2 rounded text-[11px] font-mono text-indigo-600 dark:text-indigo-400 overflow-x-auto">
-            node scripts/create-admin.mjs --email admin@campus.edu --password YourPass123!
-          </code>
+        <div className="p-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700 flex items-center justify-between text-xs">
+          <span className="text-zinc-600 dark:text-zinc-400 flex items-center gap-1.5">
+            <ShieldAlert className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400" />
+            <span>Are you a Faculty/Admin?</span>
+          </span>
+          <Link
+            href="/admin/login"
+            className="font-semibold text-indigo-600 hover:text-indigo-500 dark:text-indigo-400"
+          >
+            Admin Sign In →
+          </Link>
         </div>
       </div>
 
