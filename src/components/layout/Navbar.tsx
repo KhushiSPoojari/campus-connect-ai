@@ -22,12 +22,12 @@ import {
 import { useAuth } from '@/lib/context/auth-context';
 import { Badge } from '@/components/ui/Badge';
 
-const NAV_ITEMS = [
-  { label: 'Search & Home', href: '/', icon: Search },
-  { label: 'Faculty Directory', href: '/faculty', icon: Users },
-  { label: 'Classrooms & Vacancies', href: '/classrooms', icon: DoorOpen },
-  { label: 'Campus Map', href: '/navigation', icon: MapPin },
-  { label: 'Notices & Events', href: '/notices', icon: Bell },
+export const NAV_ITEMS = [
+  { label: 'Search & Home', shortLabel: 'Search', href: '/', icon: Search },
+  { label: 'Faculty Directory', shortLabel: 'Faculty', href: '/faculty', icon: Users },
+  { label: 'Classrooms & Vacancies', shortLabel: 'Classrooms', href: '/classrooms', icon: DoorOpen },
+  { label: 'Campus Map', shortLabel: 'Campus Map', href: '/navigation', icon: MapPin },
+  { label: 'Notices & Events', shortLabel: 'Notices', href: '/notices', icon: Bell },
 ];
 
 export function Navbar() {
@@ -45,21 +45,21 @@ export function Navbar() {
         Skip to main content
       </a>
 
-      <div className="mx-auto max-w-[1600px] px-4 sm:px-6 xl:px-8">
-        <div className="flex min-h-20 items-center justify-between gap-x-5 gap-y-3 py-3">
+      <div className="mx-auto max-w-[1600px] px-3 sm:px-6 xl:px-8">
+        <div className="flex min-h-16 sm:min-h-20 items-center justify-between gap-x-2 sm:gap-x-4 py-2 sm:py-3">
 
           {/* BRANDING */}
           <Link
             href="/"
-            className="flex w-[250px] shrink-0 items-center gap-3 rounded-lg p-1 group focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
+            className="flex shrink-0 items-center gap-2 sm:gap-3 rounded-lg p-1 group focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
           >
-            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 text-white shadow-md shadow-indigo-500/20 transition-transform group-hover:scale-105">
-              <GraduationCap className="h-6 w-6" />
+            <div className="flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 text-white shadow-md shadow-indigo-500/20 transition-transform group-hover:scale-105">
+              <GraduationCap className="h-5 w-5 sm:h-6 sm:w-6" />
             </div>
 
             <div className="min-w-0">
-              <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-                <span className="whitespace-nowrap text-lg font-bold leading-tight tracking-tight text-zinc-900 dark:text-zinc-100">
+              <div className="flex items-center gap-x-2">
+                <span className="whitespace-nowrap text-base sm:text-lg font-bold leading-tight tracking-tight text-zinc-900 dark:text-zinc-100">
                   Campus Connect{' '}
                   <span className="text-indigo-600 dark:text-indigo-400">
                     AI
@@ -71,7 +71,7 @@ export function Navbar() {
                 </span>
               </div>
 
-              <p className="mt-1 hidden max-w-[210px] text-[11px] leading-snug text-zinc-500 dark:text-zinc-400 sm:block">
+              <p className="mt-0.5 hidden max-w-[210px] text-[11px] leading-snug text-zinc-500 dark:text-zinc-400 sm:block xl:hidden 2xl:block truncate">
                 Information &amp; Space Optimization
               </p>
             </div>
@@ -79,7 +79,7 @@ export function Navbar() {
 
           {/* DESKTOP NAVIGATION */}
           <nav
-            className="hidden min-w-0 flex-1 items-center justify-center gap-1 xl:flex"
+            className="hidden shrink-0 items-center gap-1 xl:flex 2xl:gap-1.5"
             aria-label="Main Navigation"
           >
             {NAV_ITEMS.map((item) => {
@@ -90,9 +90,9 @@ export function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg px-2 py-2 text-xs font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 2xl:px-3 2xl:text-sm ${
+                  className={`flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg px-2.5 py-1.5 text-xs font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 2xl:px-3 2xl:py-2 2xl:text-sm ${
                     isActive
-                      ? 'bg-indigo-50 font-semibold text-indigo-700 dark:bg-indigo-950/60 dark:text-indigo-300'
+                      ? 'bg-indigo-50 font-semibold text-indigo-700 dark:bg-indigo-950/60 dark:text-indigo-300 shadow-xs'
                       : 'text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-white'
                   }`}
                   aria-current={isActive ? 'page' : undefined}
@@ -104,7 +104,8 @@ export function Navbar() {
                         : 'text-zinc-400'
                     }`}
                   />
-                  <span>{item.label}</span>
+                  <span className="hidden 2xl:inline">{item.label}</span>
+                  <span className="2xl:hidden">{item.shortLabel}</span>
                 </Link>
               );
             })}
@@ -117,10 +118,11 @@ export function Navbar() {
                 {user.role === 'admin' ? (
                   <Link
                     href="/admin"
-                    className="flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg border border-indigo-300 bg-indigo-50/70 px-3 py-2 text-xs font-semibold text-indigo-700 shadow-sm transition hover:bg-indigo-100 dark:border-indigo-800 dark:bg-indigo-950/40 dark:text-indigo-300"
+                    className="flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg border border-indigo-300 bg-indigo-50/70 px-2.5 py-1.5 2xl:px-3 2xl:py-2 text-xs font-semibold text-indigo-700 shadow-xs transition hover:bg-indigo-100 dark:border-indigo-800 dark:bg-indigo-950/40 dark:text-indigo-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
                   >
                     <ShieldAlert className="h-3.5 w-3.5 shrink-0 text-indigo-600 dark:text-indigo-400" />
-                    <span>Admin Dashboard</span>
+                    <span className="hidden 2xl:inline">Admin Dashboard</span>
+                    <span className="2xl:hidden">Admin</span>
                     <span className="rounded bg-indigo-600 px-1.5 py-0.5 text-[10px] font-bold text-white">
                       Admin
                     </span>
@@ -133,7 +135,7 @@ export function Navbar() {
 
                 <div className="flex items-center gap-1.5 rounded-full bg-zinc-100 px-2.5 py-1 text-xs font-medium text-zinc-700 dark:bg-zinc-800/80 dark:text-zinc-300">
                   <User className="h-3.5 w-3.5 shrink-0 text-zinc-400" />
-                  <span className="max-w-[100px] truncate font-semibold">
+                  <span className="max-w-[80px] 2xl:max-w-[120px] truncate font-semibold">
                     {user.name}
                   </span>
                   <Badge variant={user.role === 'admin' ? 'primary' : 'info'}>
@@ -146,26 +148,27 @@ export function Navbar() {
                   onClick={() => logout()}
                   title="Sign out"
                   aria-label="Sign out"
-                  className="rounded-lg p-2 text-zinc-400 transition hover:bg-red-50 hover:text-red-600 dark:hover:bg-red-950/30"
+                  className="rounded-lg p-1.5 2xl:p-2 text-zinc-400 transition hover:bg-red-50 hover:text-red-600 dark:hover:bg-red-950/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500"
                 >
                   <LogOut className="h-4 w-4" />
                 </button>
               </div>
             ) : (
-              <div className="flex items-center gap-1.5">
+              <div className="flex items-center gap-1.5 2xl:gap-2">
                 {/* Student Login */}
                 <Link
                   href="/login"
-                  className="flex shrink-0 items-center gap-1 whitespace-nowrap rounded-lg px-2.5 py-1.5 text-xs font-semibold text-zinc-700 transition hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-zinc-800"
+                  className="flex shrink-0 items-center gap-1 whitespace-nowrap rounded-lg px-2.5 py-1.5 text-xs font-semibold text-zinc-700 transition hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-zinc-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
                 >
                   <LogIn className="h-3.5 w-3.5 text-indigo-600 dark:text-indigo-400" />
-                  <span>Student Login</span>
+                  <span className="hidden 2xl:inline">Student Login</span>
+                  <span className="2xl:hidden">Login</span>
                 </Link>
 
                 {/* Student Register */}
                 <Link
                   href="/register"
-                  className="flex shrink-0 items-center gap-1 whitespace-nowrap rounded-lg px-2.5 py-1.5 text-xs font-semibold text-zinc-700 transition hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-zinc-800"
+                  className="flex shrink-0 items-center gap-1 whitespace-nowrap rounded-lg px-2.5 py-1.5 text-xs font-semibold text-zinc-700 transition hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-zinc-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
                 >
                   <UserPlus className="h-3.5 w-3.5 text-indigo-600 dark:text-indigo-400" />
                   <span>Register</span>
@@ -174,10 +177,11 @@ export function Navbar() {
                 {/* Admin Portal */}
                 <Link
                   href="/admin/login"
-                  className="flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg border border-indigo-600/30 bg-indigo-50 px-3 py-1.5 text-xs font-semibold text-indigo-700 shadow-sm transition hover:bg-indigo-100 dark:border-indigo-800 dark:bg-indigo-950/50 dark:text-indigo-300"
+                  className="flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg border border-indigo-600/30 bg-indigo-50/80 px-2.5 py-1.5 2xl:px-3 text-xs font-semibold text-indigo-700 shadow-xs transition hover:bg-indigo-100 dark:border-indigo-800 dark:bg-indigo-950/50 dark:text-indigo-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
                 >
                   <ShieldAlert className="h-3.5 w-3.5 text-indigo-600 dark:text-indigo-400" />
-                  <span>Admin Portal</span>
+                  <span className="hidden 2xl:inline">Admin Portal</span>
+                  <span className="2xl:hidden">Admin</span>
                 </Link>
               </div>
             )}

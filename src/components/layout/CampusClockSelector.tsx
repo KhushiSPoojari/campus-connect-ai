@@ -17,12 +17,12 @@ export function CampusClockSelector() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bg-indigo-900 text-indigo-50 border-b border-indigo-800 text-xs py-2 px-4">
+    <div className="bg-indigo-900 text-indigo-50 border-b border-indigo-800 text-xs py-2 px-3 sm:px-4 overflow-x-hidden">
       <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
         {/* Left: Active clock readout */}
-        <div className="flex items-center gap-2">
-          <Clock className="w-4 h-4 text-indigo-300" />
-          <span className="font-semibold text-white">Campus Timetable Clock:</span>
+        <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+          <Clock className="w-4 h-4 text-indigo-300 shrink-0" />
+          <span className="font-semibold text-white"><span className="hidden sm:inline">Campus Timetable </span>Clock:</span>
           <span className="bg-indigo-800/80 px-2.5 py-0.5 rounded-md font-mono text-indigo-200 border border-indigo-700">
             {day}, {timeStr}
           </span>
