@@ -1,0 +1,120 @@
+{
+  "nodes": [
+    {
+      "id": "node-main-gate",
+      "name": "Main Entrance Gate",
+      "code": "GATE-01",
+      "type": "gate",
+      "x": 120,
+      "y": 680,
+      "description": "Primary campus entrance with security kiosk, visitor registration, and campus shuttle stop.",
+      "facilities": ["Security Desk", "Visitor Parking", "Bicycle Bay", "Bus Stop"]
+    },
+    {
+      "id": "node-admin",
+      "name": "Administrative Block",
+      "code": "ADM-01",
+      "type": "building",
+      "x": 280,
+      "y": 550,
+      "description": "Houses the Dean of Academics, Registrar, Admissions Office, and Student Welfare Board.",
+      "facilities": ["Registrar", "Accounts Office", "Dean's Suite", "ATM"]
+    },
+    {
+      "id": "node-auditorium",
+      "name": "Grand University Auditorium",
+      "code": "AUD-01",
+      "type": "building",
+      "x": 420,
+      "y": 680,
+      "description": "1,200 seat performance auditorium for convocations, symposiums, and cultural events.",
+      "facilities": ["Main Stage", "Green Rooms", "Acoustic Audio", "Balcony Seating"]
+    },
+    {
+      "id": "node-library",
+      "name": "Central Library & Commons",
+      "code": "LIB-01",
+      "type": "building",
+      "x": 450,
+      "y": 480,
+      "description": "Four-story learning commons with digital media labs, 24/7 reading halls, and journal archives.",
+      "facilities": ["Digital Resource Center", "Quiet Study Zone", "Café Corner", "Book Return Kiosk"]
+    },
+    {
+      "id": "node-student-center",
+      "name": "Student Activity Center & Food Court",
+      "code": "SAC-01",
+      "type": "facility",
+      "x": 320,
+      "y": 320,
+      "description": "Hub for student clubs, indoor games, cafeteria, and student union council office.",
+      "facilities": ["Food Court", "Club Hub", "Recreation Hall", "Stationery Store"]
+    },
+    {
+      "id": "node-sports",
+      "name": "Sports Arena & Gymnasium",
+      "code": "SPT-01",
+      "type": "facility",
+      "x": 140,
+      "y": 240,
+      "description": "Indoor basketball courts, Olympic badminton stadium, fitness gym, and athletics track.",
+      "facilities": ["Gymnasium", "Badminton Courts", "Locker Rooms", "Medical First Aid"]
+    },
+    {
+      "id": "node-turing",
+      "name": "Turing Engineering Tower",
+      "code": "TUR-01",
+      "type": "building",
+      "x": 640,
+      "y": 360,
+      "description": "Seven-story tower for Computer Science & Software Engineering, LH-101, LH-102, and faculty cabins.",
+      "facilities": ["Lecture Halls 101-105", "Faculty Cabins T-201 to T-310", "AI Research Lab", "High-Speed Elevators"]
+    },
+    {
+      "id": "node-ramanujan",
+      "name": "Ramanujan Science Complex",
+      "code": "RAM-01",
+      "type": "building",
+      "x": 760,
+      "y": 540,
+      "description": "Houses Mathematics, Data Science, Quantum Computing Center, and Lecture Hall LH-201.",
+      "facilities": ["LH-201 & LH-202", "Faculty Cabins R-101 to R-420", "GPU Lab-301", "Math Help Desk"]
+    },
+    {
+      "id": "node-tesla",
+      "name": "Tesla Electrical Wing",
+      "code": "TSL-01",
+      "type": "building",
+      "x": 560,
+      "y": 180,
+      "description": "Department of Electrical & Electronics Engineering, Embedded Systems Lab, and LH-103.",
+      "facilities": ["LH-103", "Faculty Cabins E-101 to E-210", "VLSI Design Lab", "Power Systems Rig"]
+    },
+    {
+      "id": "node-newton",
+      "name": "Newton Heavy Engineering Wing",
+      "code": "NEW-01",
+      "type": "building",
+      "x": 820,
+      "y": 200,
+      "description": "Mechanical and Aerospace engineering laboratories, wind tunnel, and tutorial rooms.",
+      "facilities": ["LH-104 & TR-102", "Faculty Cabins N-101 to N-115", "Fluid Dynamics Lab", "Robotics Bay"]
+    }
+  ],
+  "edges": [
+    { "from": "node-main-gate", "to": "node-admin", "distanceMeters": 160, "description": "Walk north along the Palm Boulevard avenue towards the Admin Block." },
+    { "from": "node-main-gate", "to": "node-auditorium", "distanceMeters": 180, "description": "Turn right past the entrance fountain towards the Grand Auditorium." },
+    { "from": "node-admin", "to": "node-library", "distanceMeters": 170, "description": "Proceed northeast across the Central Quadrangle walkway to the Library." },
+    { "from": "node-admin", "to": "node-student-center", "distanceMeters": 210, "description": "Walk north on Cedar Path towards the Student Activity Center." },
+    { "from": "node-auditorium", "to": "node-library", "distanceMeters": 190, "description": "Head northwest along the landscaped promenade directly to the Library." },
+    { "from": "node-auditorium", "to": "node-ramanujan", "distanceMeters": 250, "description": "Walk northeast along East Ring Road towards Ramanujan Complex." },
+    { "from": "node-student-center", "to": "node-sports", "distanceMeters": 150, "description": "Take the covered west canopy walkway straight into the Sports Arena." },
+    { "from": "node-student-center", "to": "node-library", "distanceMeters": 180, "description": "Cross Southeast Lawn footpath to enter the Library west entrance." },
+    { "from": "node-library", "to": "node-turing", "distanceMeters": 220, "description": "Walk north along the Tech Plaza paved walkway towards Turing Tower." },
+    { "from": "node-library", "to": "node-ramanujan", "distanceMeters": 200, "description": "Take the Science Walkway heading east towards Ramanujan Science Complex." },
+    { "from": "node-turing", "to": "node-tesla", "distanceMeters": 160, "description": "Cross the North Courtyard overbridge connecting to Tesla Electrical Wing." },
+    { "from": "node-turing", "to": "node-newton", "distanceMeters": 210, "description": "Walk northeast past the Robotics Annex towards Newton Heavy Engineering." },
+    { "from": "node-turing", "to": "node-ramanujan", "distanceMeters": 190, "description": "Walk south-southeast along the central academic breezeway." },
+    { "from": "node-tesla", "to": "node-newton", "distanceMeters": 180, "description": "Walk east along Engineering High Street connecting Tesla and Newton wings." }
+  ]
+}

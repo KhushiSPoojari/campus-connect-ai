@@ -1,0 +1,236 @@
+[
+  {
+    "id": "fac-01",
+    "name": "Dr. Sarah Mitchell",
+    "title": "Professor & Head of Department",
+    "department": "Computer Science & Engineering",
+    "email": "sarah.mitchell@demo-campus.edu",
+    "phone": "+1 (555) 019-2831",
+    "office": {
+      "building": "Turing Engineering Tower",
+      "floor": "3rd Floor",
+      "roomNumber": "T-304",
+      "landmark": "Opposite Advanced AI Lab"
+    },
+    "subjects": ["CS301 - Distributed Systems", "CS402 - Cloud Computing Architecture"],
+    "bio": "Specializes in distributed consensus protocols, high-throughput microservices, and edge computing.",
+    "weeklySchedule": {
+      "Monday": [
+        { "startTime": "09:00", "endTime": "10:30", "activity": "Class", "location": "LH-101", "subjectCode": "CS301", "subjectName": "Distributed Systems" },
+        { "startTime": "10:30", "endTime": "12:00", "activity": "OfficeHours", "location": "Cabin T-304" },
+        { "startTime": "14:00", "endTime": "16:00", "activity": "Lab", "location": "Lab-202", "subjectCode": "CS402", "subjectName": "Cloud Architecture Lab" }
+      ],
+      "Tuesday": [
+        { "startTime": "10:00", "endTime": "11:30", "activity": "Class", "location": "LH-101", "subjectCode": "CS301", "subjectName": "Distributed Systems" },
+        { "startTime": "11:30", "endTime": "13:00", "activity": "Meeting", "location": "Conference Hall B" },
+        { "startTime": "14:30", "endTime": "16:30", "activity": "OfficeHours", "location": "Cabin T-304" }
+      ],
+      "Wednesday": [
+        { "startTime": "09:00", "endTime": "10:30", "activity": "Class", "location": "LH-101", "subjectCode": "CS301", "subjectName": "Distributed Systems" },
+        { "startTime": "11:00", "endTime": "12:30", "activity": "OfficeHours", "location": "Cabin T-304" },
+        { "startTime": "14:00", "endTime": "15:30", "activity": "Class", "location": "LH-201", "subjectCode": "CS402", "subjectName": "Cloud Computing Architecture" }
+      ],
+      "Thursday": [
+        { "startTime": "10:00", "endTime": "11:30", "activity": "Meeting", "location": "Dean's Office, Admin Block" },
+        { "startTime": "13:30", "endTime": "15:30", "activity": "OfficeHours", "location": "Cabin T-304" }
+      ],
+      "Friday": [
+        { "startTime": "09:00", "endTime": "11:00", "activity": "Lab", "location": "Lab-202", "subjectCode": "CS402", "subjectName": "Cloud Architecture Lab" },
+        { "startTime": "11:30", "endTime": "13:00", "activity": "OfficeHours", "location": "Cabin T-304" },
+        { "startTime": "14:00", "endTime": "16:00", "activity": "Free", "location": "Cabin T-304" }
+      ]
+    }
+  },
+  {
+    "id": "fac-02",
+    "name": "Prof. David Vance",
+    "title": "Associate Professor",
+    "department": "Computer Science & Engineering",
+    "email": "david.vance@demo-campus.edu",
+    "phone": "+1 (555) 019-2832",
+    "office": {
+      "building": "Turing Engineering Tower",
+      "floor": "2nd Floor",
+      "roomNumber": "T-212",
+      "landmark": "Near West Staircase"
+    },
+    "subjects": ["CS201 - Data Structures & Algorithms", "CS305 - Database Management Systems"],
+    "bio": "Focuses on query optimization, spatial database structures, and high-performance in-memory algorithms.",
+    "weeklySchedule": {
+      "Monday": [
+        { "startTime": "10:00", "endTime": "11:30", "activity": "Class", "location": "LH-102", "subjectCode": "CS201", "subjectName": "Data Structures & Algorithms" },
+        { "startTime": "11:30", "endTime": "13:00", "activity": "OfficeHours", "location": "Cabin T-212" },
+        { "startTime": "14:00", "endTime": "15:30", "activity": "Class", "location": "LH-103", "subjectCode": "CS305", "subjectName": "Database Management Systems" }
+      ],
+      "Tuesday": [
+        { "startTime": "09:00", "endTime": "11:00", "activity": "Lab", "location": "Lab-101", "subjectCode": "CS201", "subjectName": "Data Structures Lab" },
+        { "startTime": "11:30", "endTime": "13:00", "activity": "OfficeHours", "location": "Cabin T-212" },
+        { "startTime": "15:00", "endTime": "16:30", "activity": "Meeting", "location": "Curriculum Board Room" }
+      ],
+      "Wednesday": [
+        { "startTime": "10:00", "endTime": "11:30", "activity": "Class", "location": "LH-102", "subjectCode": "CS201", "subjectName": "Data Structures & Algorithms" },
+        { "startTime": "14:00", "endTime": "15:30", "activity": "Class", "location": "LH-103", "subjectCode": "CS305", "subjectName": "Database Management Systems" }
+      ],
+      "Thursday": [
+        { "startTime": "09:30", "endTime": "11:30", "activity": "OfficeHours", "location": "Cabin T-212" },
+        { "startTime": "13:30", "endTime": "15:30", "activity": "Lab", "location": "Lab-201", "subjectCode": "CS305", "subjectName": "Database Systems Lab" }
+      ],
+      "Friday": [
+        { "startTime": "10:00", "endTime": "11:30", "activity": "Class", "location": "LH-102", "subjectCode": "CS201", "subjectName": "Data Structures & Algorithms" },
+        { "startTime": "13:30", "endTime": "15:00", "activity": "OfficeHours", "location": "Cabin T-212" }
+      ]
+    }
+  },
+  {
+    "id": "fac-03",
+    "name": "Dr. Elena Rostova",
+    "title": "Assistant Professor",
+    "department": "Artificial Intelligence & Data Science",
+    "email": "elena.rostova@demo-campus.edu",
+    "phone": "+1 (555) 019-2833",
+    "office": {
+      "building": "Ramanujan Science Complex",
+      "floor": "4th Floor",
+      "roomNumber": "R-408",
+      "landmark": "Beside Robotics Research Center"
+    },
+    "subjects": ["AI302 - Machine Learning Foundations", "AI405 - Deep Learning & NLP"],
+    "bio": "Research in generative models, transformers, and multimodal perception for robotics.",
+    "weeklySchedule": {
+      "Monday": [
+        { "startTime": "11:00", "endTime": "12:30", "activity": "Class", "location": "LH-201", "subjectCode": "AI302", "subjectName": "Machine Learning Foundations" },
+        { "startTime": "14:00", "endTime": "15:30", "activity": "OfficeHours", "location": "Cabin R-408" }
+      ],
+      "Tuesday": [
+        { "startTime": "09:00", "endTime": "10:30", "activity": "Class", "location": "LH-202", "subjectCode": "AI405", "subjectName": "Deep Learning & NLP" },
+        { "startTime": "11:00", "endTime": "13:00", "activity": "OfficeHours", "location": "Cabin R-408" },
+        { "startTime": "14:00", "endTime": "16:00", "activity": "Lab", "location": "Lab-301", "subjectCode": "AI302", "subjectName": "ML Compute Lab" }
+      ],
+      "Wednesday": [
+        { "startTime": "11:00", "endTime": "12:30", "activity": "Class", "location": "LH-201", "subjectCode": "AI302", "subjectName": "Machine Learning Foundations" },
+        { "startTime": "15:00", "endTime": "16:30", "activity": "OfficeHours", "location": "Cabin R-408" }
+      ],
+      "Thursday": [
+        { "startTime": "09:00", "endTime": "10:30", "activity": "Class", "location": "LH-202", "subjectCode": "AI405", "subjectName": "Deep Learning & NLP" },
+        { "startTime": "11:00", "endTime": "13:00", "activity": "Lab", "location": "Lab-301", "subjectCode": "AI405", "subjectName": "Deep Learning Lab" },
+        { "startTime": "14:30", "endTime": "16:00", "activity": "OfficeHours", "location": "Cabin R-408" }
+      ],
+      "Friday": [
+        { "startTime": "10:00", "endTime": "12:00", "activity": "OfficeHours", "location": "Cabin R-408" },
+        { "startTime": "14:00", "endTime": "15:30", "activity": "Meeting", "location": "Research Seminar Room" }
+      ]
+    }
+  },
+  {
+    "id": "fac-04",
+    "name": "Prof. Marcus Thorne",
+    "title": "Professor",
+    "department": "Electrical & Electronics Engineering",
+    "email": "marcus.thorne@demo-campus.edu",
+    "phone": "+1 (555) 019-2834",
+    "office": {
+      "building": "Tesla Electrical Wing",
+      "floor": "1st Floor",
+      "roomNumber": "E-105",
+      "landmark": "Next to Embedded Systems Lab"
+    },
+    "subjects": ["EE204 - Signals & Linear Systems", "EE308 - Microprocessors & Microcontrollers"],
+    "bio": "Expert in digital signal processing, FPGA hardware acceleration, and IoT sensor networks.",
+    "weeklySchedule": {
+      "Monday": [
+        { "startTime": "09:00", "endTime": "10:30", "activity": "Class", "location": "LH-103", "subjectCode": "EE204", "subjectName": "Signals & Linear Systems" },
+        { "startTime": "11:00", "endTime": "12:30", "activity": "OfficeHours", "location": "Cabin E-105" },
+        { "startTime": "14:00", "endTime": "16:30", "activity": "Lab", "location": "Lab-102", "subjectCode": "EE308", "subjectName": "Microprocessor Lab" }
+      ],
+      "Tuesday": [
+        { "startTime": "10:00", "endTime": "11:30", "activity": "Class", "location": "LH-104", "subjectCode": "EE308", "subjectName": "Microprocessors & Microcontrollers" },
+        { "startTime": "13:30", "endTime": "15:30", "activity": "OfficeHours", "location": "Cabin E-105" }
+      ],
+      "Wednesday": [
+        { "startTime": "09:00", "endTime": "10:30", "activity": "Class", "location": "LH-103", "subjectCode": "EE204", "subjectName": "Signals & Linear Systems" },
+        { "startTime": "11:00", "endTime": "12:30", "activity": "OfficeHours", "location": "Cabin E-105" }
+      ],
+      "Thursday": [
+        { "startTime": "10:00", "endTime": "11:30", "activity": "Class", "location": "LH-104", "subjectCode": "EE308", "subjectName": "Microprocessors & Microcontrollers" },
+        { "startTime": "14:00", "endTime": "16:00", "activity": "Meeting", "location": "Faculty Council Chamber" }
+      ],
+      "Friday": [
+        { "startTime": "09:30", "endTime": "12:00", "activity": "OfficeHours", "location": "Cabin E-105" }
+      ]
+    }
+  },
+  {
+    "id": "fac-05",
+    "name": "Dr. Priya Sundaram",
+    "title": "Associate Professor",
+    "department": "Mathematics & Computing",
+    "email": "priya.sundaram@demo-campus.edu",
+    "phone": "+1 (555) 019-2835",
+    "office": {
+      "building": "Ramanujan Science Complex",
+      "floor": "2nd Floor",
+      "roomNumber": "R-215",
+      "landmark": "Adjacent to Computational Lab"
+    },
+    "subjects": ["MA101 - Linear Algebra & Calculus", "MA203 - Probability & Stochastic Processes"],
+    "bio": "Works on random matrix theory, Bayesian statistics, and high-dimensional optimization.",
+    "weeklySchedule": {
+      "Monday": [
+        { "startTime": "08:30", "endTime": "10:00", "activity": "Class", "location": "LH-201", "subjectCode": "MA101", "subjectName": "Linear Algebra & Calculus" },
+        { "startTime": "10:30", "endTime": "12:00", "activity": "OfficeHours", "location": "Cabin R-215" }
+      ],
+      "Tuesday": [
+        { "startTime": "11:00", "endTime": "12:30", "activity": "Class", "location": "LH-102", "subjectCode": "MA203", "subjectName": "Probability & Stochastic Processes" },
+        { "startTime": "14:00", "endTime": "16:00", "activity": "OfficeHours", "location": "Cabin R-215" }
+      ],
+      "Wednesday": [
+        { "startTime": "08:30", "endTime": "10:00", "activity": "Class", "location": "LH-201", "subjectCode": "MA101", "subjectName": "Linear Algebra & Calculus" },
+        { "startTime": "11:00", "endTime": "12:30", "activity": "OfficeHours", "location": "Cabin R-215" }
+      ],
+      "Thursday": [
+        { "startTime": "11:00", "endTime": "12:30", "activity": "Class", "location": "LH-102", "subjectCode": "MA203", "subjectName": "Probability & Stochastic Processes" },
+        { "startTime": "14:00", "endTime": "15:30", "activity": "Meeting", "location": "Department Committee Room" }
+      ],
+      "Friday": [
+        { "startTime": "09:00", "endTime": "11:30", "activity": "OfficeHours", "location": "Cabin R-215" }
+      ]
+    }
+  },
+  {
+    "id": "fac-06",
+    "name": "Prof. Arthur Pendelton",
+    "title": "Assistant Professor",
+    "department": "Mechanical & Aerospace Engineering",
+    "email": "arthur.pendelton@demo-campus.edu",
+    "phone": "+1 (555) 019-2836",
+    "office": {
+      "building": "Newton Heavy Engineering Wing",
+      "floor": "1st Floor",
+      "roomNumber": "N-102",
+      "landmark": "Near Fluid Mechanics Wind Tunnel"
+    },
+    "subjects": ["ME202 - Thermodynamics & Heat Transfer", "ME304 - Fluid Dynamics & Aerodynamics"],
+    "bio": "Specialist in computational fluid dynamics, supersonic flow, and renewable energy heat exchangers.",
+    "weeklySchedule": {
+      "Monday": [
+        { "startTime": "11:00", "endTime": "12:30", "activity": "Class", "location": "LH-104", "subjectCode": "ME202", "subjectName": "Thermodynamics" },
+        { "startTime": "14:00", "endTime": "16:00", "activity": "OfficeHours", "location": "Cabin N-102" }
+      ],
+      "Tuesday": [
+        { "startTime": "09:00", "endTime": "10:30", "activity": "Class", "location": "LH-103", "subjectCode": "ME304", "subjectName": "Fluid Dynamics" },
+        { "startTime": "11:00", "endTime": "13:00", "activity": "Lab", "location": "Lab-103", "subjectCode": "ME304", "subjectName": "Fluid Mechanics Lab" }
+      ],
+      "Wednesday": [
+        { "startTime": "11:00", "endTime": "12:30", "activity": "Class", "location": "LH-104", "subjectCode": "ME202", "subjectName": "Thermodynamics" },
+        { "startTime": "13:30", "endTime": "15:30", "activity": "OfficeHours", "location": "Cabin N-102" }
+      ],
+      "Thursday": [
+        { "startTime": "09:00", "endTime": "10:30", "activity": "Class", "location": "LH-103", "subjectCode": "ME304", "subjectName": "Fluid Dynamics" },
+        { "startTime": "14:00", "endTime": "16:00", "activity": "OfficeHours", "location": "Cabin N-102" }
+      ],
+      "Friday": [
+        { "startTime": "10:00", "endTime": "12:00", "activity": "OfficeHours", "location": "Cabin N-102" }
+      ]
+    }
+  }
+]

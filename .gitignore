@@ -47,7 +47,6 @@ next-env.d.ts
 *.db-wal
 *.db-shm
 /data/
-data/
 
 # uploaded documents & caches
 uploads/

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "loc-t304",
+    "name": "Dr. Sarah Mitchell's Office",
+    "building": "Turing Engineering Tower",
+    "floor": "3rd Floor",
+    "roomOrOffice": "Cabin T-304",
+    "landmark": "Opposite Advanced AI Lab, East Wing",
+    "nodeId": "node-turing",
+    "tags": ["Faculty Office", "CSE HOD", "Computer Science", "Sarah Mitchell"]
+  },
+  {
+    "id": "loc-t212",
+    "name": "Prof. David Vance's Office",
+    "building": "Turing Engineering Tower",
+    "floor": "2nd Floor",
+    "roomOrOffice": "Cabin T-212",
+    "landmark": "Near West Staircase & Faculty Lounge",
+    "nodeId": "node-turing",
+    "tags": ["Faculty Office", "Algorithms", "Databases", "David Vance"]
+  },
+  {
+    "id": "loc-r408",
+    "name": "Dr. Elena Rostova's Office",
+    "building": "Ramanujan Science Complex",
+    "floor": "4th Floor",
+    "roomOrOffice": "Cabin R-408",
+    "landmark": "Beside Robotics Research Center",
+    "nodeId": "node-ramanujan",
+    "tags": ["Faculty Office", "Machine Learning", "AI", "Elena Rostova"]
+  },
+  {
+    "id": "loc-e105",
+    "name": "Prof. Marcus Thorne's Office",
+    "building": "Tesla Electrical Wing",
+    "floor": "1st Floor",
+    "roomOrOffice": "Cabin E-105",
+    "landmark": "Next to Embedded Systems Lab",
+    "nodeId": "node-tesla",
+    "tags": ["Faculty Office", "EEE", "Signals", "Marcus Thorne"]
+  },
+  {
+    "id": "loc-r215",
+    "name": "Dr. Priya Sundaram's Office",
+    "building": "Ramanujan Science Complex",
+    "floor": "2nd Floor",
+    "roomOrOffice": "Cabin R-215",
+    "landmark": "Adjacent to Computational Mathematics Lab",
+    "nodeId": "node-ramanujan",
+    "tags": ["Faculty Office", "Mathematics", "Calculus", "Priya Sundaram"]
+  },
+  {
+    "id": "loc-n102",
+    "name": "Prof. Arthur Pendelton's Office",
+    "building": "Newton Heavy Engineering Wing",
+    "floor": "1st Floor",
+    "roomOrOffice": "Cabin N-102",
+    "landmark": "Near Fluid Mechanics Wind Tunnel",
+    "nodeId": "node-newton",
+    "tags": ["Faculty Office", "Mechanical", "Thermodynamics", "Arthur Pendelton"]
+  },
+  {
+    "id": "loc-lh101",
+    "name": "Lecture Hall 101 (LH-101)",
+    "building": "Turing Engineering Tower",
+    "floor": "1st Floor",
+    "roomOrOffice": "LH-101",
+    "landmark": "Ground Floor North Atrium",
+    "nodeId": "node-turing",
+    "tags": ["Lecture Hall", "LH-101", "Classroom", "Turing Tower"]
+  },
+  {
+    "id": "loc-lh102",
+    "name": "Lecture Hall 102 (LH-102)",
+    "building": "Turing Engineering Tower",
+    "floor": "1st Floor",
+    "roomOrOffice": "LH-102",
+    "landmark": "Ground Floor South Corridor",
+    "nodeId": "node-turing",
+    "tags": ["Lecture Hall", "LH-102", "Classroom", "Turing Tower"]
+  },
+  {
+    "id": "loc-lh201",
+    "name": "Lecture Hall 201 (LH-201)",
+    "building": "Ramanujan Science Complex",
+    "floor": "2nd Floor",
+    "roomOrOffice": "LH-201",
+    "landmark": "Central Escalator Landing",
+    "nodeId": "node-ramanujan",
+    "tags": ["Lecture Hall", "LH-201", "Classroom", "Ramanujan Complex"]
+  },
+  {
+    "id": "loc-dean-office",
+    "name": "Dean of Academic Affairs Suite",
+    "building": "Administrative Block",
+    "floor": "2nd Floor",
+    "roomOrOffice": "ADM-201",
+    "landmark": "Main Foyer, Executive Wing",
+    "nodeId": "node-admin",
+    "tags": ["Administration", "Dean", "Academics", "Student Affairs"]
+  },
+  {
+    "id": "loc-registrar",
+    "name": "Office of the University Registrar",
+    "building": "Administrative Block",
+    "floor": "1st Floor",
+    "roomOrOffice": "ADM-105",
+    "landmark": "Ground Floor Right Wing, Window 4",
+    "nodeId": "node-admin",
+    "tags": ["Administration", "Registrar", "Transcripts", "Certificates"]
+  },
+  {
+    "id": "loc-digital-commons",
+    "name": "Digital Resource Center & Helpdesk",
+    "building": "Central Library & Commons",
+    "floor": "1st Floor",
+    "roomOrOffice": "LIB-102",
+    "landmark": "Immediately past the library security turnstiles",
+    "nodeId": "node-library",
+    "tags": ["Library", "IT Helpdesk", "Computer Terminals", "Printing"]
+  }
+]

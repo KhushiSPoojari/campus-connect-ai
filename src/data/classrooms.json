@@ -1,0 +1,178 @@
+[
+  {
+    "id": "room-lh101",
+    "roomNumber": "LH-101",
+    "buildingId": "bld-turing",
+    "buildingName": "Turing Engineering Tower",
+    "floor": 1,
+    "wing": "North",
+    "capacity": 120,
+    "type": "Lecture Hall",
+    "amenities": ["Smart Projector", "Central AC", "Dual Microphones", "Tiered Seating", "Wi-Fi 6 Access Points"],
+    "weeklySchedule": {
+      "Monday": [
+        { "startTime": "09:00", "endTime": "10:30", "subjectCode": "CS301", "subjectName": "Distributed Systems", "facultyName": "Dr. Sarah Mitchell", "batch": "B.Tech CSE - Sec A" },
+        { "startTime": "11:00", "endTime": "12:30", "subjectCode": "CS401", "subjectName": "Compiler Design", "facultyName": "Guest Faculty", "batch": "B.Tech CSE - Sec B" },
+        { "startTime": "14:00", "endTime": "15:30", "subjectCode": "HS201", "subjectName": "Technical Communication", "facultyName": "Prof. Lisa Ray", "batch": "B.Tech Combined" }
+      ],
+      "Tuesday": [
+        { "startTime": "10:00", "endTime": "11:30", "subjectCode": "CS301", "subjectName": "Distributed Systems", "facultyName": "Dr. Sarah Mitchell", "batch": "B.Tech CSE - Sec A" },
+        { "startTime": "14:00", "endTime": "15:30", "subjectCode": "CS401", "subjectName": "Compiler Design", "facultyName": "Guest Faculty", "batch": "B.Tech CSE - Sec B" }
+      ],
+      "Wednesday": [
+        { "startTime": "09:00", "endTime": "10:30", "subjectCode": "CS301", "subjectName": "Distributed Systems", "facultyName": "Dr. Sarah Mitchell", "batch": "B.Tech CSE - Sec A" },
+        { "startTime": "11:00", "endTime": "12:30", "subjectCode": "CS401", "subjectName": "Compiler Design", "facultyName": "Guest Faculty", "batch": "B.Tech CSE - Sec B" }
+      ],
+      "Thursday": [
+        { "startTime": "11:00", "endTime": "12:30", "subjectCode": "HS201", "subjectName": "Technical Communication", "facultyName": "Prof. Lisa Ray", "batch": "B.Tech Combined" }
+      ],
+      "Friday": [
+        { "startTime": "10:00", "endTime": "11:30", "subjectCode": "CS301", "subjectName": "Distributed Systems Tutorial", "facultyName": "Dr. Sarah Mitchell", "batch": "B.Tech CSE - Sec A" }
+      ]
+    }
+  },
+  {
+    "id": "room-lh102",
+    "roomNumber": "LH-102",
+    "buildingId": "bld-turing",
+    "buildingName": "Turing Engineering Tower",
+    "floor": 1,
+    "wing": "South",
+    "capacity": 90,
+    "type": "Lecture Hall",
+    "amenities": ["Smart Projector", "Central AC", "Whiteboard", "Lapel Mic", "Document Camera"],
+    "weeklySchedule": {
+      "Monday": [
+        { "startTime": "10:00", "endTime": "11:30", "subjectCode": "CS201", "subjectName": "Data Structures & Algorithms", "facultyName": "Prof. David Vance", "batch": "B.Tech CSE - Sec C" }
+      ],
+      "Tuesday": [
+        { "startTime": "11:00", "endTime": "12:30", "subjectCode": "MA203", "subjectName": "Probability & Stochastic Processes", "facultyName": "Dr. Priya Sundaram", "batch": "B.Tech DS - Sec A" },
+        { "startTime": "14:00", "endTime": "15:30", "subjectCode": "CS202", "subjectName": "Discrete Mathematics", "facultyName": "Prof. David Vance", "batch": "B.Tech CSE - Sec C" }
+      ],
+      "Wednesday": [
+        { "startTime": "10:00", "endTime": "11:30", "subjectCode": "CS201", "subjectName": "Data Structures & Algorithms", "facultyName": "Prof. David Vance", "batch": "B.Tech CSE - Sec C" }
+      ],
+      "Thursday": [
+        { "startTime": "11:00", "endTime": "12:30", "subjectCode": "MA203", "subjectName": "Probability & Stochastic Processes", "facultyName": "Dr. Priya Sundaram", "batch": "B.Tech DS - Sec A" }
+      ],
+      "Friday": [
+        { "startTime": "10:00", "endTime": "11:30", "subjectCode": "CS201", "subjectName": "Data Structures & Algorithms", "facultyName": "Prof. David Vance", "batch": "B.Tech CSE - Sec C" }
+      ]
+    }
+  },
+  {
+    "id": "room-lh103",
+    "roomNumber": "LH-103",
+    "buildingId": "bld-tesla",
+    "buildingName": "Tesla Electrical Wing",
+    "floor": 1,
+    "wing": "East",
+    "capacity": 75,
+    "type": "Lecture Hall",
+    "amenities": ["Projector", "Central AC", "Sound System"],
+    "weeklySchedule": {
+      "Monday": [
+        { "startTime": "09:00", "endTime": "10:30", "subjectCode": "EE204", "subjectName": "Signals & Linear Systems", "facultyName": "Prof. Marcus Thorne", "batch": "B.Tech EEE - Sec A" },
+        { "startTime": "14:00", "endTime": "15:30", "subjectCode": "CS305", "subjectName": "Database Management Systems", "facultyName": "Prof. David Vance", "batch": "B.Tech CSE - Sec B" }
+      ],
+      "Tuesday": [
+        { "startTime": "09:00", "endTime": "10:30", "subjectCode": "ME304", "subjectName": "Fluid Dynamics", "facultyName": "Prof. Arthur Pendelton", "batch": "B.Tech Mech" }
+      ],
+      "Wednesday": [
+        { "startTime": "09:00", "endTime": "10:30", "subjectCode": "EE204", "subjectName": "Signals & Linear Systems", "facultyName": "Prof. Marcus Thorne", "batch": "B.Tech EEE - Sec A" },
+        { "startTime": "14:00", "endTime": "15:30", "subjectCode": "CS305", "subjectName": "Database Management Systems", "facultyName": "Prof. David Vance", "batch": "B.Tech CSE - Sec B" }
+      ],
+      "Thursday": [
+        { "startTime": "09:00", "endTime": "10:30", "subjectCode": "ME304", "subjectName": "Fluid Dynamics", "facultyName": "Prof. Arthur Pendelton", "batch": "B.Tech Mech" }
+      ],
+      "Friday": []
+    }
+  },
+  {
+    "id": "room-lh201",
+    "roomNumber": "LH-201",
+    "buildingId": "bld-ramanujan",
+    "buildingName": "Ramanujan Science Complex",
+    "floor": 2,
+    "wing": "Central",
+    "capacity": 150,
+    "type": "Lecture Hall",
+    "amenities": ["Smart Projector", "Central AC", "Surround Audio", "Dual Podiums", "High Speed Wi-Fi"],
+    "weeklySchedule": {
+      "Monday": [
+        { "startTime": "08:30", "endTime": "10:00", "subjectCode": "MA101", "subjectName": "Linear Algebra & Calculus", "facultyName": "Dr. Priya Sundaram", "batch": "First Year All Wings" },
+        { "startTime": "11:00", "endTime": "12:30", "subjectCode": "AI302", "subjectName": "Machine Learning Foundations", "facultyName": "Dr. Elena Rostova", "batch": "B.Tech AI - Sec A" }
+      ],
+      "Tuesday": [],
+      "Wednesday": [
+        { "startTime": "08:30", "endTime": "10:00", "subjectCode": "MA101", "subjectName": "Linear Algebra & Calculus", "facultyName": "Dr. Priya Sundaram", "batch": "First Year All Wings" },
+        { "startTime": "11:00", "endTime": "12:30", "subjectCode": "AI302", "subjectName": "Machine Learning Foundations", "facultyName": "Dr. Elena Rostova", "batch": "B.Tech AI - Sec A" },
+        { "startTime": "14:00", "endTime": "15:30", "subjectCode": "CS402", "subjectName": "Cloud Computing Architecture", "facultyName": "Dr. Sarah Mitchell", "batch": "B.Tech CSE - Final Yr" }
+      ],
+      "Thursday": [],
+      "Friday": []
+    }
+  },
+  {
+    "id": "room-sr301",
+    "roomNumber": "SR-301",
+    "buildingId": "bld-turing",
+    "buildingName": "Turing Engineering Tower",
+    "floor": 3,
+    "wing": "North",
+    "capacity": 45,
+    "type": "Seminar Room",
+    "amenities": ["Smart Board", "Central AC", "Video Conferencing Bar", "Roundtable Layout"],
+    "weeklySchedule": {
+      "Monday": [],
+      "Tuesday": [
+        { "startTime": "14:00", "endTime": "16:00", "subjectCode": "RES901", "subjectName": "Department Research Colloquium", "facultyName": "Dr. Sarah Mitchell", "batch": "PhD Scholars" }
+      ],
+      "Wednesday": [],
+      "Thursday": [],
+      "Friday": [
+        { "startTime": "15:00", "endTime": "17:00", "subjectCode": "SEM101", "subjectName": "Student Tech Talk Series", "facultyName": "ACM Student Chapter", "batch": "Open to All" }
+      ]
+    }
+  },
+  {
+    "id": "room-lab301",
+    "roomNumber": "Lab-301",
+    "buildingId": "bld-ramanujan",
+    "buildingName": "Ramanujan Science Complex",
+    "floor": 3,
+    "wing": "West",
+    "capacity": 60,
+    "type": "Computer Lab",
+    "amenities": ["60x GPU Workstations (RTX 4080)", "Dual Gigabit LAN", "Central AC", "Projector"],
+    "weeklySchedule": {
+      "Monday": [],
+      "Tuesday": [
+        { "startTime": "14:00", "endTime": "16:00", "subjectCode": "AI302", "subjectName": "ML Compute Lab", "facultyName": "Dr. Elena Rostova", "batch": "B.Tech AI - Sec A" }
+      ],
+      "Wednesday": [],
+      "Thursday": [
+        { "startTime": "11:00", "endTime": "13:00", "subjectCode": "AI405", "subjectName": "Deep Learning Lab", "facultyName": "Dr. Elena Rostova", "batch": "B.Tech AI - Final Yr" }
+      ],
+      "Friday": []
+    }
+  },
+  {
+    "id": "room-tr102",
+    "roomNumber": "TR-102",
+    "buildingId": "bld-newton",
+    "buildingName": "Newton Heavy Engineering Wing",
+    "floor": 1,
+    "wing": "Central",
+    "capacity": 30,
+    "type": "Tutorial Room",
+    "amenities": ["Whiteboard", "Air Conditioned", "Flexible Desks"],
+    "weeklySchedule": {
+      "Monday": [],
+      "Tuesday": [],
+      "Wednesday": [],
+      "Thursday": [],
+      "Friday": []
+    }
+  }
+]
